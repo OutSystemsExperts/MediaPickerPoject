@@ -2,20 +2,20 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-def siteUrl = 'https://github.com/DmcSDK/MediaPickerPoject'   // 项目的主页
-def gitUrl = 'https://github.com/DmcSDK/MediaPickerPoject.git'   // Git仓库的url
+def siteUrl = 'https://github.com/OutsystemsExperts/MediaPickerPoject'   // 项目的主页
+def gitUrl = 'https://github.com/OutsystemsExperts/MediaPickerPoject.git'   // Git仓库的url
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 version = "3.3" //发布版本号
 group = "com.dmcBig" //最终引用形式，如compile 'com.**;
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 25
+        minSdkVersion 19
+        targetSdkVersion 29
         versionCode 1
         versionName "3.3"
 
@@ -32,12 +32,9 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.github.bumptech.glide:glide:4.0.0'
-    compile 'com.android.support:support-v4:25.3.1'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    compile 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     compile 'pub.devrel:easypermissions:1.0.0'
     compile 'com.github.chrisbanes.photoview:library:1.2.4'
 }
